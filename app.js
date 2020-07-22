@@ -1,4 +1,6 @@
+
                            /*--------------------------Chapter # 1--------------------------*/
+
 //alert("Hello! \nWelcome to JS World..."); //Task # 1 (Chap # 1)
 
 //alert("Error! Please enter a valid password.","JavaScript Alert"); //Task # 2 (Chap # 1)
@@ -1806,12 +1808,18 @@ if (select==4) {
 // }
 // mainFunction();
 
-//Task # 5 remianing
+//Task # 5
 
-// function indexOf(){
-//   var text = prompt("Enter Something!");
-
+// function checkindex(charr,string){
+//   for(var i=0; i<string.length; i++){
+//     if(string[i] == charr){
+//       alert("Found at index of : "+i);
+//       break;
+//     }
+//   }
 // }
+// var str = "Farah Nizam";
+// checkindex("a",str)
 
 //Task # 6
 
@@ -1829,7 +1837,7 @@ if (select==4) {
 
 // removeVowels();
 
-//Task # 7 remaining
+//Task # 7
 
 // function isVowel(){
 //   var str = prompt("Enter Sentence");
@@ -1891,6 +1899,24 @@ if (select==4) {
 // }
 
 // vowels();
+
+//another method
+// function occurence(text){
+//   var count_a = 0;
+//   var count_e = 0;
+//   for(var i=0; i<= text.length; i++){
+//     if(text.charAt(i)=="e"){
+//       count_e++;
+//     }
+//     if (text.charAt(i)=="a") {
+//       count_a++;
+//     }
+//   }
+//     alert(count_e);
+//     alert(count_a);
+// }
+// var text = "Please read this application and give me gratuity";
+// occurence(text);
 
 //Task # 8
 
@@ -2011,6 +2037,19 @@ if (select==4) {
 
 //Task # 1
 
+// function Submit(){
+//   var name = document.getElementById("name").value;
+//   var username = document.getElementById("username").value;
+//   var email = document.getElementById("email").value;
+//   var password = document.getElementById("password").value;
+//   var confirmpassword = document.getElementById("confirmpassword").value;
+//   document.write("<h1>Your Data</h1> <br>")
+//   document.write("Name : "+name+" <br> ");
+//   document.write("Username : "+username+" <br> ");
+//   document.write("Email : "+email+" <br> ");
+//   document.write("Password : "+password+" <br> ");
+//   document.write("Confirm Password : "+confirmpassword);
+// }
 
 //Task # 2
 
@@ -2021,64 +2060,225 @@ if (select==4) {
 
 //Task # 3
 
-function edit_row(no)
-{
- document.getElementById("edit_button"+no).style.display="none";
- document.getElementById("save_button"+no).style.display="block";
+// function edit_row(no)
+// {
+//  document.getElementById("edit_button"+no).style.display="none";
+//  document.getElementById("save_button"+no).style.display="block";
   
- var index=document.getElementById("index_row"+no);
- var name=document.getElementById("name_row"+no);
- var clas=document.getElementById("clas_row"+no);
+//  var index=document.getElementById("index_row"+no);
+//  var name=document.getElementById("name_row"+no);
+//  var clas=document.getElementById("clas_row"+no);
   
- var index_data=index.innerHTML;
- var name_data=name.innerHTML;
- var clas_data=clas.innerHTML;
+//  var index_data=index.innerHTML;
+//  var name_data=name.innerHTML;
+//  var clas_data=clas.innerHTML;
   
- index.innerHTML="<input type='text' id='index_text"+no+"' value='"+index_data+"'>";
- name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
- clas.innerHTML="<input type='text' id='clas_text"+no+"' value='"+clas_data+"'>";
-}
+//  index.innerHTML="<input type='text' id='index_text"+no+"' value='"+index_data+"'>";
+//  name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
+//  clas.innerHTML="<input type='text' id='clas_text"+no+"' value='"+clas_data+"'>";
+// }
 
-function save_row(no)
-{
- var index_val=document.getElementById("index_text"+no).value;
- var name_val=document.getElementById("name_text"+no).value;
- var age_val=document.getElementById("clas_text"+no).value;
+// function save_row(no)
+// {
+//  var index_val=document.getElementById("index_text"+no).value;
+//  var name_val=document.getElementById("name_text"+no).value;
+//  var age_val=document.getElementById("clas_text"+no).value;
 
- document.getElementById("index_row"+no).innerHTML=index_val;
- document.getElementById("name_row"+no).innerHTML=name_val;
- document.getElementById("clas_row"+no).innerHTML=clas_val;
+//  document.getElementById("index_row"+no).innerHTML=index_val;
+//  document.getElementById("name_row"+no).innerHTML=name_val;
+//  document.getElementById("clas_row"+no).innerHTML=clas_val;
 
- document.getElementById("edit_button"+no).style.display="block";
- document.getElementById("save_button"+no).style.display="none";
-}
+//  document.getElementById("edit_button"+no).style.display="block";
+//  document.getElementById("save_button"+no).style.display="none";
+// }
 
-function delete_row(no)
-{
- document.getElementById("row"+no+"").outerHTML="";
-}
+// function delete_row(no)
+// {
+//  document.getElementById("row"+no+"").outerHTML="";
+// }
 
-function add_row()
-{
- var new_index=document.getElementById("new_index").value;
- var new_name=document.getElementById("new_name").value;
- var new_clas=document.getElementById("new_clas").value;
+// function add_row()
+// {
+//  var new_index=document.getElementById("new_index").value;
+//  var new_name=document.getElementById("new_name").value;
+//  var new_clas=document.getElementById("new_clas").value;
   
- var table=document.getElementById("data_table");
- var table_len=(table.rows.length)-1;
- var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='index_row"+table_len+"'>"+new_index+"</td><td id='name_row"+table_len+"'>"+new_name+"</td><td id='clas_row"+table_len+"'>"+new_clas+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+//  var table=document.getElementById("data_table");
+//  var table_len=(table.rows.length)-1;
+//  var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='index_row"+table_len+"'>"+new_index+"</td><td id='name_row"+table_len+"'>"+new_name+"</td><td id='clas_row"+table_len+"'>"+new_clas+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
 
- document.getElementById("new_index").value="";
- document.getElementById("new_name").value="";
- document.getElementById("new_clas").value="";
-}
+//  document.getElementById("new_index").value="";
+//  document.getElementById("new_name").value="";
+//  document.getElementById("new_clas").value="";
+// }
+
                 /*-----------------------------------Chapter # 53 to 58-----------------------------------*/
 
 //Task # 1
 
+// function modal1(){
+// // Get the modal
+// var modal1 = document.getElementById("myModal1");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img1 = document.getElementById("myImg1");
+// var modalImg1 = document.getElementById("img01");
+// var captionText1 = document.getElementById("caption1");
+// img1.onclick = function(){
+//   modal1.style.display = "block";
+//   modalImg1.src = this.src;
+//   captionText1.innerHTML = this.alt;
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close1")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal1.style.display = "none";
+// }
+
+// }
+// function modal2(){
+// // Get the modal
+// var modal2 = document.getElementById("myModal2");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img2 = document.getElementById("myImg2");
+// var modalImg2 = document.getElementById("img02");
+// var captionText2 = document.getElementById("caption2");
+// img2.onclick = function(){
+//   modal2.style.display = "block";
+//   modalImg2.src = this.src;
+//   captionText2.innerHTML = this.alt;
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close2")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal2.style.display = "none";
+// }
+// }
+
+// function modal3(){
+// // Get the modal
+// var modal3 = document.getElementById("myModal3");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img3 = document.getElementById("myImg3");
+// var modalImg3 = document.getElementById("img03");
+// var captionText3 = document.getElementById("caption3");
+// img3.onclick = function(){
+//   modal3.style.display = "block";
+//   modalImg3.src = this.src;
+//   captionText3.innerHTML = this.alt;
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close3")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal3.style.display = "none";
+// }
+// }
+
+// function modal4(){
+// // Get the modal
+// var modal4 = document.getElementById("myModal4");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img4 = document.getElementById("myImg4");
+// var modalImg4 = document.getElementById("img04");
+// var captionText4 = document.getElementById("caption4");
+// img4.onclick = function(){
+//   modal4.style.display = "block";
+//   modalImg4.src = this.src;
+//   captionText4.innerHTML = this.alt;
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close4")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal4.style.display = "none";
+// }
+// }
+
 //Task # 2
+
+// var fontSize = 1;
+// function ZoomIn(){
+//   fontSize += 10;
+//   document.getElementById("Para").style.fontSize = fontSize + "px";
+// }
+// function ZoomOut(){
+//   fontSize -= 10;
+//   document.getElementById("Para").style.fontSize = fontSize + "px";
+// }
+
                 /*-----------------------------------Chapter # 58 to 67-----------------------------------*/
 
 //Task # 1
 
+// var div = document.getElementById("main-content"); //(i)
+
+// var para = document.getElementsByTagName("p"); //(ii)
+// document.write(para);
+// console.log(para);
+
+// var elements = document.getElementsByClassName("render"); //(iii)
+// var para = document.getElementsByTagName("p");
+// var content1 = para[0].innerHTML;
+// document.write(content1, "<br>");
+// var content2 = para[1].innerHTML;
+// document.write(content2, "<br>");
+// var content3 = para[2].innerHTML;
+// document.write(content3, "<br>");
+// var content4 = para[3].innerHTML;
+// document.write(content4, "<br>");
+// var content5 = para[4].innerHTML;
+// document.write(content5, "<br>");
+
+// var fn = document.getElementById("first-name").innerHTML = 'Farah'; //(iv)
+
+// var ln = document.getElementById("last-name").innerHTML = 'Nizam'; //(v)
+// var email = document.getElementById("email").innerHTML = 'farah_nizam@yahoo.com';
+
 //Task # 2
+
+// var targetNode = document.getElementById("form-content"); //(i)
+// var ntype = targetNode.nodeType;
+// document.write(ntype);
+
+// var targetNode = document.getElementById("last-name"); //(ii)
+// var ntype = targetNode.nodeType;
+// var cNode = targetNode.firstChild;
+// document.write(ntype);
+// document.write(cNode);
+
+// var textnode = document.createTextNode("Nizam"); //(iii)
+// var ln = document.getElementById("last-name").childNodes[0];
+// ln.replaceChild(textnode, ln.childNodes[0]);
+
+// var div = document.getElementById("main-content"); //(iv)
+// var fChild = parentNode.firstChild;
+// document.write(fChild);
+// var lChild = parentNode.lastChild;
+// document.write(lChild);
+// console.log();
+
+// var targetNode = document.getElementById("last-name"); //(v)
+// secondEl = targetNode.nextSibling;
+// document.write(secondEl);
+// previousEl = targetNode.previousSibling;
+// document.write(secondEl);
+
+// var kidNode = document.getElementById("email"); //(vi)
+// var pNode = kidNode.parentNode;
+// document.write(pNode);
+// var ntype = kidNode.nodeType;
+// document.write(ntype);

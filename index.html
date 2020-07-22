@@ -8,7 +8,7 @@
 			alert("Please Provide Your Information!");
 		}
 	</script-->
-	<style>
+	<!--style>
 		.image{
 			width: 150px;
 			height: 150px;
@@ -22,7 +22,118 @@
 			width: 500px;
 			height: 500px;
 		}
-	</style>
+	</style-->
+	<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg1,#myImg2,#myImg3,#myImg4 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg1:hover {opacity: 0.7;}
+#myImg2:hover {opacity: 0.7;}
+#myImg3:hover {opacity: 0.7;}
+#myImg4:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal1,.modal2,.modal3,.modal4 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content1,.modal-content2,.modal-content3,.modal-content4 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption1,#caption2,#caption3,#caption4 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content1,.modal-content2,.modal-content3,.modal-content4, #caption1,#caption2,#caption3,#caption4  {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close1,.close2,.close3,.close4 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2:hover,
+.close2:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close3:hover,
+.close3:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close4:hover,
+.close4:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content1,.modal-content2,.modal-content3,.modal-content4 {
+    width: 100%;
+  }
+}
+</style>
 </head>
       <!------Task # 7 (Chap # 1)--------->
 <!--script type="text/javascript">
@@ -149,6 +260,19 @@
 	<button onclick="Decrement()" id="De">Decrement</button></center>
 </div-->
 
+<!--Task # 1 (Chap 49 to 52)-->
+<!--form class="myForm" style="text-align: center;">
+	<div>
+		<h1>Sign Up</h1>
+		<input type="text" name="" placeholder="Enter Name" id="name"><br><br>
+		<input type="text" name="" placeholder="Enter Username" id="username"><br><br>
+		<input type="text" name="" placeholder="Enter Email" id="email"><br><br>
+		<input type="password" name="" placeholder="Enter Your Password" id="password"><br><br>
+		<input type="password" name="" placeholder="Confirm Your Password" id="confirmpassword"><br><br>
+		<button onclick="Submit()">Sign Up</button>
+	</div>
+</form-->
+
 <!--Task # 2 (Chap 49 to 52)-->
 <!--p id="para">
 Lorem ipsum, or lipsum as it is sometimes known,
@@ -156,7 +280,7 @@ Lorem ipsum, or lipsum as it is sometimes known,
 </p-->
 
 <!--Task # 3 (Chap 49 to 52)-->
-<div id="wrapper">
+<!--div id="wrapper">
 <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
 <tr>
 		<th>Index</th>
@@ -227,6 +351,61 @@ Lorem ipsum, or lipsum as it is sometimes known,
 </tr>
 
 </table>
+</div-->
+
+<!--Task # 1 (Chap 53 to 58)-->
+	<!--center><img id="myImg1" src="1.jpg" style="width: 150px; height: 150px;" onclick="modal1()">
+	<img id="myImg2" src="2.jpg" style="width: 150px; height: 150px;" onclick="modal2()">
+	<img id="myImg3" src="3.jpg" style="width: 150px; height: 150px;" onclick="modal3()">
+	<img id="myImg4" src="5.jpg" style="width: 150px; height: 150px;" onclick="modal4()"></center-->
+<!-- The Modal -->
+<!--div id="myModal1" class="modal1">
+  <span class="close1">&times;</span>
+  <img class="modal-content1" id="img01">
+  <div id="caption1"></div>
+</div>
+
+<div id="myModal2" class="modal2">
+  <span class="close2">&times;</span>
+  <img class="modal-content2" id="img02">
+  <div id="caption2"></div>
+</div>
+<div id="myModal3" class="modal3">
+  <span class="close3">&times;</span>
+  <img class="modal-content3" id="img03">
+  <div id="caption3"></div>
+</div>
+<div id="myModal4" class="modal4">
+  <span class="close4">&times;</span>
+  <img class="modal-content4" id="img04">
+  <div id="caption4"></div>
+</div-->
+
+<!--Task # 2 (Chap 53 to 58)-->
+<!--div>
+	<p id="Para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+	<center><button onclick="ZoomIn()">+</button> <button onclick="ZoomOut()">-</button></center>
+</div-->
+
+<!--Task # 1 (Chap 58 to 67)-->
+
+<div>
+<h1> DOM </h1>
+<div id="form-content" class="content">
+<label for="first-name">First Name</label>
+<input type="text" id="first-name" />
+<label for="last-name">Last Name</label>
+<input type="text" id="last-name" />
+<label for="email">Email</label>
+<input type="text" id="email" />
+</div>
+<div id=”main-content” class=”content”>
+<p class=”render”> First Name : Alex</p>
+<p class=”render” id=”lastName”>Last Name: Bank</p>
+<p class=”render”> Email : alexbank@example.com</p>
+<p class=”render”> Country : Pakistan </p>
+<p class=”render”> contact : +92 300 1234567</p>
+</div>
 </div>
 
 </body>
